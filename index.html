@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="11 个可独立复用的企业网站响应式 Section 布局案例。">
+    <title>Section Layouts</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --page-bg: #f5f6f8;
+            --card-bg: #ffffff;
+            --text: #151515;
+            --muted: #707070;
+            --line: #e7e7e7;
+            --accent: #76218c;
+            --radius: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--text);
+            background: var(--page-bg);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                "PingFang SC",
+                "Hiragino Sans GB",
+                "Microsoft YaHei",
+                Arial,
+                sans-serif;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            width: min(calc(100% - 40px), 1200px);
+            margin-inline: auto;
+            padding: 70px 0 90px;
+        }
+
+        .head {
+            max-width: 760px;
+            margin-bottom: 42px;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.08;
+            letter-spacing: -.04em;
+        }
+
+        .intro {
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            min-width: 0;
+            overflow: hidden;
+            background: var(--card-bg);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                border-color .25s ease;
+        }
+
+        .media {
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, #eeeeef 25%, #f7f7f8 25%, #f7f7f8 50%, #eeeeef 50%, #eeeeef 75%, #f7f7f8 75%);
+            background-size: 24px 24px;
+        }
+
+        .media img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .body {
+            padding: 22px 22px 24px;
+        }
+
+        .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 42px;
+            height: 26px;
+            margin-bottom: 14px;
+            padding: 0 10px;
+            color: #fff;
+            background: var(--accent);
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .04em;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 21px;
+            line-height: 1.35;
+        }
+
+        .desc {
+            min-height: 52px;
+            margin: 10px 0 18px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .meta span {
+            padding: 5px 8px;
+            color: #666;
+            background: #f4f4f5;
+            border-radius: 5px;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .open {
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .open::after {
+            content: "↗";
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .foot {
+            margin-top: 46px;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .card:hover {
+                transform: translateY(-4px);
+                border-color: #ddd;
+                box-shadow: 0 16px 36px rgba(0, 0, 0, .08);
+            }
+
+            .card:hover .media img {
+                transform: scale(1.025);
+            }
+        }
+
+        @media (max-width: 991px) {
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 767px) {
+            .page {
+                width: min(calc(100% - 32px), 1200px);
+                padding: 48px 0 64px;
+            }
+
+            .head {
+                margin-bottom: 30px;
+            }
+
+            .intro {
+                font-size: 15px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .desc {
+                min-height: 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .card,
+            .media img {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <header class="head">
+        <p class="eyebrow">Section Layouts</p>
+        <h1>企业网站 Section 布局案例</h1>
+        <p class="intro">
+            11 个独立、响应式、可复用的企业网站区块案例。
+            点击任意卡片将在新窗口中打开对应效果，方便单独预览、学习和后期复制使用。
+        </p>
+    </header>
+
+    <div class="grid">
+
+        <a class="card" href="section01-project-cases/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section01.png" alt="Section 01 工程案例分类切换预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 01</span>
+                <h2 class="title">工程案例分类切换</h2>
+                <p class="desc">左侧分类导航与右侧项目内容联动，手机端使用紧凑的双列分类菜单。</p>
+                <div class="meta">
+                    <span>Tabs</span>
+                    <span>JavaScript</span>
+                    <span>Responsive</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section02-featured-products/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section02.png" alt="Section 02 热销产品交错展示预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 02</span>
+                <h2 class="title">热销产品交错展示</h2>
+                <p class="desc">大幅产品图片与悬浮文字卡片左右交错排列，结构简单，适合产品推荐区。</p>
+                <div class="meta">
+                    <span>Grid</span>
+                    <span>CSS</span>
+                    <span>Responsive</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section03-color-cards/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section03.png" alt="Section 03 产品颜色色卡轮播预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 03</span>
+                <h2 class="title">产品颜色 / 色卡轮播</h2>
+                <p class="desc">色卡与场景图双向联动，支持 Fade、自动轮播、分页和手机手势操作。</p>
+                <div class="meta">
+                    <span>Swiper</span>
+                    <span>Fade</span>
+                    <span>Color Selector</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section04-certificates/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section04.png" alt="Section 04 荣誉资质证书轮播预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 04</span>
+                <h2 class="title">荣誉资质 / 证书轮播</h2>
+                <p class="desc">证书分类切换、多图轮播与点击大图预览，适合企业资质和认证展示。</p>
+                <div class="meta">
+                    <span>Swiper</span>
+                    <span>Modal</span>
+                    <span>Tabs</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section05-company-timeline/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section05.png" alt="Section 05 图片式发展历程预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 05</span>
+                <h2 class="title">图片式发展历程</h2>
+                <p class="desc">主内容与年份时间轴双 Swiper 联动，突出当前年份与对应发展事件。</p>
+                <div class="meta">
+                    <span>Swiper</span>
+                    <span>Timeline</span>
+                    <span>Sync</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section06-corporate-culture/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section06.png" alt="Section 06 企业文化 Hover 卡片预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 06</span>
+                <h2 class="title">企业文化 Hover 卡片</h2>
+                <p class="desc">图片卡片默认显示标题，Hover 后显示颜色覆盖层与详细企业文化内容。</p>
+                <div class="meta">
+                    <span>CSS Hover</span>
+                    <span>Overlay</span>
+                    <span>Grid</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section07-project-gallery/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section07.png" alt="Section 07 工程案例图库详情弹窗预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 07</span>
+                <h2 class="title">工程案例图库 + 详情 Modal</h2>
+                <p class="desc">项目 Grid、详情弹窗、Swiper Gallery 与 template 数据结构组合。</p>
+                <div class="meta">
+                    <span>Modal</span>
+                    <span>Swiper</span>
+                    <span>&lt;template&gt;</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section08-product-advantages/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section08.png" alt="Section 08 产品优势 Hover 卡片预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 08</span>
+                <h2 class="title">产品优势 Hover 卡片</h2>
+                <p class="desc">默认显示图标和卖点说明，Hover 时切换真实背景图片并隐藏图标。</p>
+                <div class="meta">
+                    <span>CSS Hover</span>
+                    <span>Background Image</span>
+                    <span>Grid</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section09-site-footer/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section09.png" alt="Section 09 企业网站 Footer 预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 09</span>
+                <h2 class="title">企业网站 Footer</h2>
+                <p class="desc">联系方式、公司介绍、快速导航、产品简介与备案版权信息完整组合。</p>
+                <div class="meta">
+                    <span>Footer</span>
+                    <span>Grid</span>
+                    <span>Inline SVG</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section10-development-timeline/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section10.png" alt="Section 10 卡片式发展历程预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 10</span>
+                <h2 class="title">卡片式发展历程</h2>
+                <p class="desc">年份、时间节点和事件卡片同时横向滑动，适合信息型企业发展时间轴。</p>
+                <div class="meta">
+                    <span>Swiper</span>
+                    <span>Timeline</span>
+                    <span>Cards</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+        <a class="card" href="section11-surface-texture-display/" target="_blank" rel="noopener noreferrer">
+            <div class="media">
+                <img src="docs/section11.png" alt="Section 11 产品表面纹理 Gallery 预览图">
+            </div>
+            <div class="body">
+                <span class="number">SECTION 11</span>
+                <h2 class="title">产品表面纹理 Gallery</h2>
+                <p class="desc">一个纹理对应一组图库，通过左侧 Tabs 切换并共用一个 Swiper Gallery。</p>
+                <div class="meta">
+                    <span>Swiper</span>
+                    <span>&lt;template&gt;</span>
+                    <span>Gallery</span>
+                </div>
+                <span class="open">打开预览</span>
+            </div>
+        </a>
+
+    </div>
+
+    <footer class="foot">
+        所有案例均为独立 Section 组件。点击卡片会在新窗口打开对应案例，便于单独预览和复制使用。
+    </footer>
+
+</main>
+
+</body>
+</html>
