@@ -1,0 +1,246 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: #f6f7f9;
+}
+
+body {
+    margin: 0;
+    color: #111;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "PingFang SC",
+        "Hiragino Sans GB",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    background: #f6f7f9;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+#section08 {
+    --accent: #76218c;
+    --text: #111;
+    --muted: #666;
+    --line: #d8d8d8;
+    padding: 72px 0 86px;
+    background: #fff;
+}
+
+#section08 .inner {
+    width: min(calc(100% - 40px), 1140px);
+    margin-inline: auto;
+}
+
+#section08 .head {
+    margin-bottom: 30px;
+}
+
+#section08 .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 8px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#section08 .eyebrow::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    flex: 0 0 auto;
+    background: var(--accent);
+}
+
+#section08 .title {
+    margin: 0;
+    font-size: clamp(38px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -.04em;
+}
+
+#section08 .title span {
+    color: var(--accent);
+}
+
+#section08 .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 24px;
+}
+
+#section08 .item {
+    position: relative;
+    min-height: 266px;
+    padding: 40px 30px 32px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .10);
+    isolation: isolate;
+}
+
+#section08 .item .bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.015);
+    transition:
+        opacity .35s ease,
+        transform .45s ease;
+    pointer-events: none;
+}
+
+#section08 .item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(39, 17, 18, .56),
+        rgba(39, 17, 18, .28)
+    );
+    transition: opacity .35s ease;
+}
+
+#section08 .icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    transition:
+        opacity .25s ease,
+        transform .35s ease;
+}
+
+#section08 .icon img {
+    width: 36px;
+    height: 36px;
+}
+
+#section08 .item h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 25px;
+    line-height: 1.25;
+    transition: color .25s ease;
+}
+
+#section08 .item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.85;
+    transition: color .25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #section08 .item:hover .bg,
+    #section08 .item:hover::after {
+        opacity: 1;
+    }
+
+    #section08 .item:hover .bg {
+        transform: scale(1.04);
+    }
+
+    #section08 .item:hover .icon {
+        opacity: 0;
+        transform: scale(.86);
+    }
+
+    #section08 .item:hover h3,
+    #section08 .item:hover p {
+        color: #fff;
+    }
+}
+
+@media (max-width: 991px) {
+    #section08 {
+        padding: 64px 0 72px;
+    }
+
+    #section08 .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    #section08 {
+        padding: 54px 0 60px;
+    }
+
+    #section08 .inner {
+        width: min(calc(100% - 32px), 1140px);
+    }
+
+    #section08 .head {
+        margin-bottom: 24px;
+    }
+
+    #section08 .title {
+        font-size: 38px;
+    }
+
+    #section08 .grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #section08 .item {
+        min-height: 230px;
+        padding: 32px 26px 28px;
+    }
+
+    #section08 .icon {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 16px;
+    }
+
+    #section08 .icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    #section08 .item h3 {
+        font-size: 23px;
+    }
+
+    #section08 .item p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #section08 .item .bg,
+    #section08 .item::after,
+    #section08 .icon,
+    #section08 .item h3,
+    #section08 .item p {
+        transition: none;
+    }
+}

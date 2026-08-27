@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: #f5f6f8;
+}
+
+body {
+    margin: 0;
+    color: #222;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "PingFang SC",
+        "Hiragino Sans GB",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    background: #f5f6f8;
+}
+
+#section10 {
+    --accent: #76218c;
+    --accent-dark: #64207a;
+    --title: #081236;
+    --text: #5f5f66;
+    --line: #d7d8dc;
+    --card: #fff;
+    padding: 72px 0 68px;
+    background: #fff;
+    overflow: hidden;
+}
+
+#section10 .inner {
+    width: min(calc(100% - 40px), 1140px);
+    margin-inline: auto;
+}
+
+#section10 .head {
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+#section10 .title {
+    margin: 0;
+    color: var(--title);
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -.025em;
+}
+
+#section10 .title sup,
+#section10 .card h3 sup {
+    font-size: .5em;
+    vertical-align: super;
+}
+
+#section10 .timeline-shell {
+    position: relative;
+    padding-bottom: 42px;
+}
+
+#section10 .timeline-line {
+    position: absolute;
+    top: 73px;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: var(--line);
+    z-index: 0;
+}
+
+#section10 .history {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 8px 4px;
+}
+
+#section10 .swiper-wrapper {
+    align-items: stretch;
+}
+
+#section10 .item {
+    height: auto;
+    display: grid;
+    grid-template-rows: 48px 50px 1fr;
+    min-width: 0;
+}
+
+#section10 .year {
+    align-self: end;
+    text-align: center;
+    color: var(--accent-dark);
+    font-size: 27px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+#section10 .dot {
+    position: relative;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    margin: 9px auto 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px #fff;
+}
+
+#section10 .dot svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#section10 .card {
+    min-height: 188px;
+    padding: 26px 24px 24px;
+    background: var(--card);
+    border: 1px solid #e6e6e8;
+    box-shadow: 0 4px 14px rgba(12, 18, 48, .08);
+    text-align: center;
+}
+
+#section10 .card h3 {
+    margin: 0 0 11px;
+    color: var(--accent-dark);
+    font-size: 23px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+#section10 .card p {
+    margin: 0;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+#section10 .pagination {
+    position: static;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#section10 .pagination .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    margin: 0 6px;
+    background: #d3d3d7;
+    opacity: 1;
+}
+
+#section10 .pagination .swiper-pagination-bullet-active {
+    width: 11px;
+    height: 11px;
+    background: var(--accent);
+    vertical-align: -2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #section10 .item .card {
+        transition:
+            transform .25s ease,
+            box-shadow .25s ease;
+    }
+
+    #section10 .item:hover .card {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(12, 18, 48, .12);
+    }
+}
+
+@media (max-width: 991px) {
+    #section10 {
+        padding: 64px 0 62px;
+    }
+
+    #section10 .timeline-line {
+        top: 70px;
+    }
+
+    #section10 .year {
+        font-size: 25px;
+    }
+
+    #section10 .card {
+        min-height: 178px;
+    }
+}
+
+@media (max-width: 767px) {
+    #section10 {
+        padding: 54px 0 56px;
+    }
+
+    #section10 .inner {
+        width: min(calc(100% - 32px), 1140px);
+    }
+
+    #section10 .head {
+        margin-bottom: 28px;
+    }
+
+    #section10 .title {
+        font-size: 34px;
+    }
+
+    #section10 .timeline-shell {
+        padding-bottom: 26px;
+    }
+
+    #section10 .timeline-line {
+        top: 65px;
+    }
+
+    #section10 .history {
+        margin-right: -16px;
+        padding-right: 16px;
+        padding-left: 0;
+    }
+
+    #section10 .item {
+        grid-template-rows: 43px 46px 1fr;
+    }
+
+    #section10 .year {
+        font-size: 23px;
+    }
+
+    #section10 .dot {
+        width: 26px;
+        height: 26px;
+        margin-top: 8px;
+    }
+
+    #section10 .dot svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    #section10 .card {
+        min-height: 180px;
+        padding: 24px 22px 22px;
+    }
+
+    #section10 .card h3 {
+        font-size: 21px;
+    }
+
+    #section10 .card p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    #section10 .pagination {
+        margin-top: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #section10 .item .card {
+        transition: none;
+    }
+}

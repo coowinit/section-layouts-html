@@ -1,0 +1,283 @@
+#section06,
+#section06 * {
+  box-sizing: border-box;
+}
+
+#section06 img {
+  display: block;
+  max-width: 100%;
+}
+
+#section06 {
+  --primary: #6f238c;
+  --primary-dark: #57186f;
+  --text: #111;
+  --muted: #555;
+  --container: 1140px;
+
+  padding: 40px 0 92px;
+  overflow: hidden;
+  background: #fff;
+}
+
+#section06 .inner {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+#section06 .head {
+  margin-bottom: 26px;
+}
+
+#section06 .eyebrow {
+  position: relative;
+  margin: 0 0 8px;
+  padding-left: 50px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#section06 .eyebrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background: var(--primary);
+  transform: translateY(-50%);
+}
+
+#section06 .title {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+#section06 .title span {
+  color: var(--primary);
+}
+
+#section06 .grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+#section06 .item {
+  position: relative;
+  min-width: 0;
+  padding-bottom: 42px;
+}
+
+#section06 .media {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 5 / 6;
+  background: #eee;
+}
+
+#section06 .media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
+}
+
+#section06 .caption {
+  position: absolute;
+  z-index: 2;
+  right: 11%;
+  bottom: 0;
+  left: 11%;
+  min-height: 106px;
+  padding: 24px 20px 20px;
+  color: #fff;
+  background: var(--primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+#section06 .caption h3,
+#section06 .overlay h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+#section06 .caption p,
+#section06 .overlay .en {
+  margin: 6px 0 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#section06 .overlay {
+  position: absolute;
+  z-index: 3;
+  inset: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(145deg, rgba(120, 39, 150, .96), rgba(87, 24, 111, .97));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .38s ease, visibility .38s ease;
+}
+
+#section06 .overlay::before,
+#section06 .overlay::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#section06 .overlay::before {
+  width: 190px;
+  height: 190px;
+  right: -72px;
+  bottom: -62px;
+}
+
+#section06 .overlay::after {
+  width: 120px;
+  height: 120px;
+  left: -48px;
+  top: -45px;
+}
+
+#section06 .content {
+  position: relative;
+  z-index: 1;
+  width: min(82%, 300px);
+  text-align: center;
+}
+
+#section06 .overlay .desc {
+  margin: 22px 0 0;
+  font-size: 15px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #section06 .item:hover .media img {
+    transform: scale(1.04);
+  }
+
+  #section06 .item:hover .caption {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  #section06 .item:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 991px) {
+  #section06 {
+    padding: 56px 0 78px;
+  }
+
+  #section06 .grid {
+    gap: 18px;
+  }
+
+  #section06 .caption {
+    right: 7%;
+    left: 7%;
+    min-height: 96px;
+    padding: 20px 14px 18px;
+  }
+
+  #section06 .caption h3,
+  #section06 .overlay h3 {
+    font-size: 18px;
+  }
+
+  #section06 .caption p,
+  #section06 .overlay .en {
+    font-size: 14px;
+  }
+
+  #section06 .overlay .desc {
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 767px) {
+  #section06 {
+    padding: 54px 0 64px;
+  }
+
+  #section06 .inner {
+    width: min(calc(100% - 32px), var(--container));
+  }
+
+  #section06 .head {
+    margin-bottom: 24px;
+  }
+
+  #section06 .eyebrow {
+    padding-left: 42px;
+    font-size: 13px;
+  }
+
+  #section06 .eyebrow::before {
+    width: 32px;
+  }
+
+  #section06 .title {
+    font-size: clamp(36px, 11vw, 46px);
+  }
+
+  #section06 .grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  #section06 .item {
+    padding-bottom: 36px;
+  }
+
+  #section06 .media {
+    aspect-ratio: 4 / 4.7;
+  }
+
+  #section06 .caption {
+    right: 8%;
+    left: 8%;
+    min-height: 92px;
+    padding: 18px 16px 16px;
+  }
+
+  #section06 .caption h3 {
+    font-size: 20px;
+  }
+
+  #section06 .caption p {
+    font-size: 15px;
+  }
+
+  /* 触屏设备保留清晰的图片 + 标题卡，不依赖 hover 才能获取核心信息。 */
+  #section06 .overlay {
+    display: none;
+  }
+}

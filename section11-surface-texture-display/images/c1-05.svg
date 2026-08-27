@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680">
+<rect width="1200" height="680" fill="#93867f"/>
+<g transform="rotate(-5 600 340)">
+<g fill="#aaa099">
+<rect x="-100" y="15" width="1420" height="94"/>
+<rect x="-100" y="130" width="1420" height="94"/>
+<rect x="-100" y="245" width="1420" height="94"/>
+<rect x="-100" y="360" width="1420" height="94"/>
+<rect x="-100" y="475" width="1420" height="94"/>
+<rect x="-100" y="590" width="1420" height="94"/>
+</g>
+<g fill="none" stroke="#6d635d" stroke-width="3" opacity=".68">
+<path d="M-40 77 C130 17 250 147 430 77 S760 17 950 82 S1180 122 1300 62"/><path d="M-40 192 C130 132 250 262 430 192 S760 132 950 197 S1180 237 1300 177"/><path d="M-40 307 C130 247 250 377 430 307 S760 247 950 312 S1180 352 1300 292"/><path d="M-40 422 C130 362 250 492 430 422 S760 362 950 427 S1180 467 1300 407"/><path d="M-40 537 C130 477 250 607 430 537 S760 477 950 542 S1180 582 1300 522"/><path d="M-40 652 C130 592 250 722 430 652 S760 592 950 657 S1180 697 1300 637"/>
+</g>
+<g stroke="#6d635d" stroke-width="7" opacity=".75"><path d="M-50 118 H1300"/><path d="M-50 233 H1300"/><path d="M-50 348 H1300"/><path d="M-50 463 H1300"/><path d="M-50 578 H1300"/></g>
+</g>
+<rect width="1200" height="680" fill="#fff" opacity="0.170"/>
+</svg>

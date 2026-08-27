@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 04 - 荣誉资质</title>
+  <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="margin:0;">
+
+<section id="section04">
+  <div class="inner">
+    <div class="head">
+      <div class="intro">
+        <p class="eyebrow">光脚丫花园地板</p>
+        <h2 class="title">荣誉<span>资质</span></h2>
+        <p class="desc">光脚丫已通过 ISO 9001:2015、ISO 14001:2015、CE、FSC、绿色标签等多项认证，并持续推进产品研发、质量检测与技术创新。</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="资质分类">
+        <button class="tab" type="button" data-filter="all" role="tab" aria-selected="false">全部</button>
+        <button class="tab is-active" type="button" data-filter="international" role="tab" aria-selected="true">国际认证</button>
+        <button class="tab" type="button" data-filter="report" role="tab" aria-selected="false">检测报告</button>
+        <button class="tab" type="button" data-filter="patent" role="tab" aria-selected="false">研发专利</button>
+        <button class="tab" type="button" data-filter="domestic" role="tab" aria-selected="false">国内认证</button>
+      </div>
+    </div>
+
+    <div class="slider swiper" aria-live="polite">
+      <div class="swiper-wrapper">
+        <article class="item swiper-slide" data-category="international">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-01.svg" data-alt="供应商评估认证证书" aria-label="放大查看：供应商评估认证证书"><img src="images/certificate-01.svg" alt="供应商评估认证证书"></button></figure>
+          <h3>供应商评估认证</h3>
+        </article>
+
+        <article class="item swiper-slide" data-category="international">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-02.svg" data-alt="CE认证证书" aria-label="放大查看：CE认证证书"><img src="images/certificate-02.svg" alt="CE认证证书"></button></figure>
+          <h3>CE认证</h3>
+        </article>
+
+        <article class="item swiper-slide" data-category="international">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-03.svg" data-alt="FSC认证证书" aria-label="放大查看：FSC认证证书"><img src="images/certificate-03.svg" alt="FSC认证证书"></button></figure>
+          <h3>FSC认证</h3>
+        </article>
+
+        <article class="item swiper-slide" data-category="international domestic">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-04.svg" data-alt="ISO 9001质量管理体系认证证书" aria-label="放大查看：ISO 9001质量管理体系认证证书"><img src="images/certificate-04.svg" alt="ISO 9001质量管理体系认证证书"></button></figure>
+          <h3>ISO 9001:2015认证</h3>
+        </article>
+
+        <article class="item swiper-slide" data-category="international">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-05.svg" data-alt="ISO 14001环境管理体系认证证书" aria-label="放大查看：ISO 14001环境管理体系认证证书"><img src="images/certificate-05.svg" alt="ISO 14001环境管理体系认证证书"></button></figure>
+          <h3>ISO 14001:2015认证</h3>
+        </article>
+
+        <article class="item swiper-slide" data-category="report">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-06.svg" data-alt="材料性能检测报告" aria-label="放大查看：材料性能检测报告"><img src="images/certificate-06.svg" alt="材料性能检测报告"></button></figure>
+          <h3>材料性能检测报告</h3>
+        </article>
+
+        <article class="item swiper-slide" data-category="patent">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-07.svg" data-alt="实用新型专利证书" aria-label="放大查看：实用新型专利证书"><img src="images/certificate-07.svg" alt="实用新型专利证书"></button></figure>
+          <h3>实用新型专利</h3>
+        </article>
+
+        <article class="item swiper-slide" data-category="domestic report">
+          <figure class="media"><button class="zoom" type="button" data-src="images/certificate-08.svg" data-alt="国内质量检测认证证书" aria-label="放大查看：国内质量检测认证证书"><img src="images/certificate-08.svg" alt="国内质量检测认证证书"></button></figure>
+          <h3>国内质量检测认证</h3>
+        </article>
+      </div>
+
+      <div class="pagination swiper-pagination" aria-label="证书分页"></div>
+    </div>
+  </div>
+
+    <div class="modal" role="dialog" aria-modal="true" aria-label="证书大图预览" aria-hidden="true" hidden>
+      <div class="dialog">
+        <button class="close" type="button" aria-label="关闭大图预览">×</button>
+        <img class="preview" src="" alt="">
+      </div>
+    </div>
+</section>
+
+<script src="vendor/swiper/swiper-bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

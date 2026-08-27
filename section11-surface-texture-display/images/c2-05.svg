@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680">
+<rect width="1200" height="680" fill="#756b66"/>
+<g transform="rotate(-5 600 340)">
+<g fill="#867b75">
+<rect x="-100" y="15" width="1420" height="94"/>
+<rect x="-100" y="130" width="1420" height="94"/>
+<rect x="-100" y="245" width="1420" height="94"/>
+<rect x="-100" y="360" width="1420" height="94"/>
+<rect x="-100" y="475" width="1420" height="94"/>
+<rect x="-100" y="590" width="1420" height="94"/>
+</g>
+<g fill="none" stroke="#b9aea8" stroke-width="3" opacity=".68">
+<path d="M0 60 c150 85 280-55 450 15 s300 70 465 2 s265-38 390 12"/><path d="M0 175 c150 85 280-55 450 15 s300 70 465 2 s265-38 390 12"/><path d="M0 290 c150 85 280-55 450 15 s300 70 465 2 s265-38 390 12"/><path d="M0 405 c150 85 280-55 450 15 s300 70 465 2 s265-38 390 12"/><path d="M0 520 c150 85 280-55 450 15 s300 70 465 2 s265-38 390 12"/><path d="M0 635 c150 85 280-55 450 15 s300 70 465 2 s265-38 390 12"/>
+</g>
+<g stroke="#b9aea8" stroke-width="7" opacity=".75"><path d="M-50 118 H1300"/><path d="M-50 233 H1300"/><path d="M-50 348 H1300"/><path d="M-50 463 H1300"/><path d="M-50 578 H1300"/></g>
+</g>
+<rect width="1200" height="680" fill="#fff" opacity="0.170"/>
+</svg>

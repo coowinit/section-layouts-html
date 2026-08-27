@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+<rect width="900" height="620" fill="#eadfce"/><rect x="-80" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="35" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="150" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="265" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="380" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="495" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="610" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="725" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="840" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/><rect x="955" y="0" width="106" height="620" fill="#9a6e4f" stroke="#6f5140" stroke-width="3"/>
+
+<circle cx="680" cy="465" r="72" fill="#758e68" opacity=".82"/>
+<path d="M680 465c-10-76 30-116 56-156M680 465c34-70 84-80 124-91" stroke="#60785b" stroke-width="10" fill="none"/>
+</svg>

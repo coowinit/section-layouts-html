@@ -1,0 +1,359 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "PingFang SC",
+        "Hiragino Sans GB",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    background: #f2f4f7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.demo-space {
+    min-height: 220px;
+    background:
+        linear-gradient(135deg, #f7f8fa 25%, #f2f4f7 25%, #f2f4f7 50%, #f7f8fa 50%, #f7f8fa 75%, #f2f4f7 75%);
+    background-size: 32px 32px;
+}
+
+#section09 {
+    --accent: #76218c;
+    --bg: #050505;
+    --text: #fff;
+    --muted: #b8b8b8;
+    --line: rgba(255, 255, 255, .14);
+    background: var(--bg);
+}
+
+#section09 .footer {
+    padding: 58px 0 0;
+}
+
+#section09 .inner {
+    width: min(calc(100% - 40px), 1140px);
+    margin-inline: auto;
+}
+
+#section09 .contact {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid var(--line);
+}
+
+#section09 .contact-item {
+    min-width: 0;
+    min-height: 106px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+#section09 .contact-item + .contact-item {
+    border-left: 1px solid var(--line);
+}
+
+#section09 a.contact-item {
+    transition: background-color .25s ease;
+}
+
+#section09 .icon {
+    width: 66px;
+    height: 66px;
+    flex: 0 0 66px;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+}
+
+#section09 .icon svg {
+    width: 34px;
+    height: 34px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#section09 .contact-item:first-child .icon svg {
+    fill: #fff;
+    stroke: none;
+}
+
+#section09 .text {
+    min-width: 0;
+    display: grid;
+    gap: 6px;
+}
+
+#section09 .text strong {
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+#section09 .text span {
+    color: #f1f1f1;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#section09 .main {
+    display: grid;
+    grid-template-columns: 1.25fr .72fr 1.05fr;
+    gap: 78px;
+    padding: 78px 0 66px;
+}
+
+#section09 h2 {
+    margin: 0 0 22px;
+    color: var(--text);
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+#section09 .about p,
+#section09 .intro p {
+    margin: 0;
+    color: #e5e5e5;
+    font-size: 16px;
+    line-height: 1.95;
+}
+
+#section09 .social {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+#section09 .social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #b5b5b5;
+    border: 1px solid rgba(255,255,255,.18);
+    font-size: 14px;
+    transition:
+        color .25s ease,
+        border-color .25s ease,
+        background-color .25s ease;
+}
+
+#section09 .nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 15px;
+}
+
+#section09 .nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #e8e8e8;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+#section09 .nav a::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    background: var(--accent);
+}
+
+#section09 .bottom {
+    min-height: 76px;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#section09 .bottom p {
+    margin: 0;
+    color: #d4d4d4;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#section09 .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 20px;
+}
+
+#section09 .links a {
+    color: #a942bc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #section09 a.contact-item:hover {
+        background: rgba(255,255,255,.035);
+    }
+
+    #section09 .nav a:hover,
+    #section09 .links a:hover {
+        color: #c55ed8;
+    }
+
+    #section09 .social a:hover {
+        color: #fff;
+        border-color: var(--accent);
+        background: var(--accent);
+    }
+}
+
+@media (max-width: 991px) {
+    #section09 .footer {
+        padding-top: 48px;
+    }
+
+    #section09 .contact {
+        grid-template-columns: 1fr;
+    }
+
+    #section09 .contact-item {
+        min-height: 94px;
+    }
+
+    #section09 .contact-item + .contact-item {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+
+    #section09 .main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 48px 56px;
+        padding: 60px 0 54px;
+    }
+
+    #section09 .intro {
+        grid-column: 1 / -1;
+    }
+
+    #section09 .bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #section09 .links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    .demo-space {
+        min-height: 120px;
+    }
+
+    #section09 .footer {
+        padding-top: 36px;
+    }
+
+    #section09 .inner {
+        width: min(calc(100% - 32px), 1140px);
+    }
+
+    #section09 .contact-item {
+        padding: 18px;
+        gap: 16px;
+    }
+
+    #section09 .icon {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+    }
+
+    #section09 .icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    #section09 .text strong {
+        font-size: 17px;
+    }
+
+    #section09 .text span {
+        font-size: 15px;
+    }
+
+    #section09 .main {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        padding: 50px 0 46px;
+    }
+
+    #section09 .intro {
+        grid-column: auto;
+    }
+
+    #section09 h2 {
+        margin-bottom: 16px;
+        font-size: 21px;
+    }
+
+    #section09 .about p,
+    #section09 .intro p {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    #section09 .nav ul {
+        gap: 13px;
+    }
+
+    #section09 .nav a {
+        font-size: 15px;
+    }
+
+    #section09 .bottom {
+        min-height: 0;
+        padding: 24px 0 28px;
+    }
+}
+
+@media (max-width: 380px) {
+    #section09 .contact-item {
+        align-items: flex-start;
+    }
+
+    #section09 .icon {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+    }
+
+    #section09 .icon svg {
+        width: 27px;
+        height: 27px;
+    }
+}

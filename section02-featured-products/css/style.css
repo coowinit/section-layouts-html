@@ -1,0 +1,271 @@
+#section02,
+#section02 * {
+  box-sizing: border-box;
+}
+
+#section02 {
+  --primary: #70208d;
+  --text: #111;
+  --muted: #5f5962;
+  --surface: #fff;
+  --bg: #f5f5f6;
+  --shadow: 0 10px 30px rgba(32, 22, 37, .13);
+  padding: 76px 0 96px;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+}
+
+#section02 .inner {
+  width: min(calc(100% - 40px), 1140px);
+  margin-inline: auto;
+}
+
+#section02 .head {
+  margin-bottom: 28px;
+}
+
+#section02 .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  color: #655d68;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#section02 .eyebrow::before {
+  width: 40px;
+  height: 1px;
+  flex: 0 0 40px;
+  background: var(--primary);
+  content: "";
+}
+
+#section02 .title {
+  margin: 0;
+  color: #090909;
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -.04em;
+}
+
+#section02 .title span,
+#section02 .caption h2 span {
+  color: var(--primary);
+}
+
+#section02 .list {
+  display: grid;
+  gap: 72px;
+}
+
+#section02 .item {
+  position: relative;
+  min-height: 355px;
+}
+
+#section02 .media {
+  width: 68%;
+  margin: 0;
+}
+
+#section02 .media img {
+  display: block;
+  width: 100%;
+  height: 355px;
+  object-fit: cover;
+}
+
+#section02 .caption {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0;
+  width: 50%;
+  min-height: 300px;
+  padding: 50px 46px 42px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transform: translateY(-50%);
+}
+
+#section02 .caption h2 {
+  margin: 0 0 18px;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.34;
+}
+
+#section02 .caption h2 span {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 24px;
+}
+
+#section02 .caption p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+#section02 .more {
+  display: inline-block;
+  color: #111;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary);
+  transition: color .2s ease;
+}
+
+#section02 .more:hover {
+  color: var(--primary);
+}
+
+#section02 .more:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+#section02 .item.reverse .media {
+  margin-left: auto;
+}
+
+#section02 .item.reverse .caption {
+  right: auto;
+  left: 0;
+}
+
+@media (max-width: 991px) {
+  #section02 {
+    padding-top: 64px;
+  }
+
+  #section02 .list {
+    gap: 64px;
+  }
+
+  #section02 .item {
+    min-height: 320px;
+  }
+
+  #section02 .media img {
+    height: 320px;
+  }
+
+  #section02 .caption {
+    width: 54%;
+    min-height: 275px;
+    padding: 38px 34px 32px;
+  }
+
+  #section02 .caption h2 {
+    font-size: 22px;
+  }
+
+  #section02 .caption h2 span {
+    font-size: 22px;
+  }
+
+  #section02 .caption p {
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 767px) {
+  #section02 {
+    padding: 48px 0 58px;
+  }
+
+  #section02 .inner {
+    width: min(calc(100% - 32px), 1140px);
+  }
+
+  #section02 .head {
+    margin-bottom: 28px;
+  }
+
+  #section02 .eyebrow {
+    font-size: 13px;
+  }
+
+  #section02 .eyebrow::before {
+    width: 30px;
+    flex-basis: 30px;
+  }
+
+  #section02 .title {
+    font-size: clamp(34px, 11vw, 44px);
+  }
+
+  #section02 .list {
+    gap: 48px;
+  }
+
+  #section02 .item,
+  #section02 .item.reverse {
+    min-height: 0;
+  }
+
+  #section02 .media,
+  #section02 .item.reverse .media {
+    width: 100%;
+    margin: 0;
+  }
+
+  #section02 .media img {
+    height: 270px;
+  }
+
+  #section02 .caption,
+  #section02 .item.reverse .caption {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: calc(100% - 18px);
+    min-height: 0;
+    margin: -28px 0 0 auto;
+    padding: 30px 24px 28px;
+  }
+
+  #section02 .item.reverse .caption {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  #section02 .caption h2 {
+    margin-bottom: 14px;
+    font-size: 21px;
+  }
+
+  #section02 .caption h2 span {
+    font-size: 21px;
+  }
+
+  #section02 .caption p {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 380px) {
+  #section02 .media img {
+    height: 240px;
+  }
+
+  #section02 .caption,
+  #section02 .item.reverse .caption {
+    width: 100%;
+    margin-top: 0;
+    padding: 26px 20px 24px;
+  }
+}

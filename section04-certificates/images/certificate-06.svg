@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="820" viewBox="0 0 600 820">
+<rect width="600" height="820" fill="#eef1f4"/>
+<rect x="28" y="28" width="544" height="764" rx="4" fill="#fff" stroke="#68747e" stroke-width="4"/>
+<rect x="48" y="48" width="504" height="724" fill="none" stroke="#68747e" stroke-width="1.5" opacity=".55"/>
+<circle cx="300" cy="126" r="48" fill="none" stroke="#68747e" stroke-width="4"/>
+<path d="M278 128l14 14 32-38" fill="none" stroke="#68747e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="300" y="215" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#2f2f2f">TEST REPORT</text>
+<text x="300" y="248" font-family="Arial,sans-serif" font-size="12" text-anchor="middle" fill="#777">OFFICIAL DOCUMENT</text>
+<g fill="#d7d7d7">
+<rect x="105" y="302" width="390" height="8" rx="4"/><rect x="82" y="329" width="436" height="7" rx="3.5"/><rect x="105" y="355" width="390" height="7" rx="3.5"/>
+<rect x="82" y="402" width="436" height="7" rx="3.5"/><rect x="108" y="428" width="384" height="7" rx="3.5"/><rect x="92" y="454" width="416" height="7" rx="3.5"/>
+<rect x="110" y="500" width="380" height="7" rx="3.5"/><rect x="84" y="526" width="432" height="7" rx="3.5"/><rect x="126" y="552" width="348" height="7" rx="3.5"/>
+</g>
+<circle cx="188" cy="660" r="50" fill="none" stroke="#68747e" stroke-width="5" opacity=".8"/>
+<circle cx="188" cy="660" r="37" fill="none" stroke="#68747e" stroke-width="2" opacity=".8"/>
+<path d="M154 660h68M188 626v68" stroke="#68747e" stroke-width="2" opacity=".65"/>
+<path d="M350 676c46-34 74-23 112 0" fill="none" stroke="#555" stroke-width="3" stroke-linecap="round"/>
+<text x="406" y="708" font-family="Arial,sans-serif" font-size="11" text-anchor="middle" fill="#888">AUTHORIZED SIGNATURE</text>
+<text x="300" y="756" font-family="Arial,sans-serif" font-size="10" text-anchor="middle" fill="#999">Certificate No. 2026-0006</text>
+</svg>

@@ -1,0 +1,336 @@
+#section03 {
+  --primary: #76249a;
+  --text: #171717;
+  --muted: #666;
+  --bg: #f4f4f4;
+  --line: #dedede;
+  --container: 1140px;
+  background: var(--bg);
+  padding: 90px 0;
+  overflow: hidden;
+  color: var(--text);
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+}
+
+#section03 *,
+#section03 *::before,
+#section03 *::after {
+  box-sizing: border-box;
+}
+
+#section03 .inner {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+#section03 .content {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  align-items: center;
+  gap: 44px;
+}
+
+#section03 .intro {
+  position: relative;
+  z-index: 2;
+}
+
+#section03 .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#section03 .eyebrow::before {
+  width: 40px;
+  height: 1px;
+  background: var(--primary);
+  content: "";
+}
+
+#section03 .title {
+  margin: 0 0 12px;
+  color: #060606;
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+#section03 .title span {
+  color: var(--primary);
+}
+
+#section03 .desc {
+  margin: 0 0 14px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+#section03 .current {
+  margin: 0 0 18px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+#section03 .current strong {
+  margin-left: 6px;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#section03 .swatches {
+  display: grid;
+  grid-template-columns: repeat(3, 66px);
+  gap: 16px 18px;
+  margin-bottom: 24px;
+}
+
+#section03 .swatch {
+  width: 66px;
+  height: 66px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color .25s ease, transform .25s ease;
+}
+
+#section03 .swatch:hover {
+  transform: translateY(-2px);
+}
+
+#section03 .swatch:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+#section03 .swatch.is-active {
+  border-color: var(--primary);
+}
+
+#section03 .swatch img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+#section03 .more {
+  display: inline-block;
+  color: #4b4b4b;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+}
+
+#section03 .more:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+#section03 .viewer {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  aspect-ratio: 1.86 / 1;
+  overflow: hidden;
+  background: #ddd;
+}
+
+/*
+ * 只保留 Section 03 实际需要的 Swiper 基础结构。
+ * 即使本地 Swiper CSS 意外未加载，也不会出现横向/纵向超长滚动条。
+ */
+#section03 .viewer .swiper-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-property: transform;
+}
+
+#section03 .viewer .swiper-slide {
+  position: relative;
+  display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#section03 .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Swiper 未初始化时只显示当前场景，作为本地脚本不可用时的兜底。 */
+#section03 .viewer:not(.swiper-initialized) .swiper-wrapper {
+  display: block;
+}
+
+#section03 .viewer:not(.swiper-initialized) .slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+#section03 .viewer:not(.swiper-initialized) .slide.is-active {
+  display: block;
+}
+
+/* Fade 效果需要的最小样式。 */
+#section03 .viewer.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+
+#section03 .viewer.swiper-fade .swiper-slide-active {
+  pointer-events: auto;
+}
+
+#section03 .swiper-pagination {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+#section03 .swiper-pagination-bullet {
+  display: block;
+  flex: 0 0 9px;
+  width: 9px;
+  height: 9px;
+  margin: 0 !important;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 1;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .08);
+  cursor: pointer;
+}
+
+#section03 .swiper-pagination-bullet-active {
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
+@media (max-width: 991px) {
+  #section03 {
+    padding: 72px 0;
+  }
+
+  #section03 .content {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  #section03 .swatches {
+    grid-template-columns: repeat(3, 60px);
+    gap: 14px;
+  }
+
+  #section03 .swatch {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  #section03 {
+    padding: 56px 0;
+  }
+
+  #section03 .inner {
+    width: min(calc(100% - 32px), var(--container));
+  }
+
+  #section03 .content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  #section03 .intro {
+    max-width: none;
+  }
+
+  #section03 .title {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  #section03 .desc {
+    max-width: 520px;
+  }
+
+  #section03 .swatches {
+    grid-template-columns: repeat(6, 54px);
+    gap: 12px;
+    overflow-x: auto;
+    padding: 2px 2px 6px;
+    scrollbar-width: none;
+  }
+
+  #section03 .swatches::-webkit-scrollbar {
+    display: none;
+  }
+
+  #section03 .swatch {
+    width: 54px;
+    height: 54px;
+  }
+
+  #section03 .viewer {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 420px) {
+  #section03 .swatches {
+    grid-template-columns: repeat(3, 58px);
+    overflow: visible;
+  }
+
+  #section03 .swatch {
+    width: 58px;
+    height: 58px;
+  }
+
+  #section03 .viewer {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #section03 .swatch {
+    transition: none;
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680">
+<rect width="1200" height="680" fill="#8d8581"/>
+<g transform="rotate(-5 600 340)">
+<g fill="#a29a95">
+<rect x="-100" y="15" width="1420" height="94"/>
+<rect x="-100" y="130" width="1420" height="94"/>
+<rect x="-100" y="245" width="1420" height="94"/>
+<rect x="-100" y="360" width="1420" height="94"/>
+<rect x="-100" y="475" width="1420" height="94"/>
+<rect x="-100" y="590" width="1420" height="94"/>
+</g>
+<g fill="none" stroke="#66605d" stroke-width="3" opacity=".68">
+<path d="M0 70 c60-45 120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0"/><path d="M0 185 c60-45 120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0"/><path d="M0 300 c60-45 120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0"/><path d="M0 415 c60-45 120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0"/><path d="M0 530 c60-45 120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0"/><path d="M0 645 c60-45 120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0 s120-45 180 0 s120 45 180 0"/>
+</g>
+<g stroke="#66605d" stroke-width="7" opacity=".75"><path d="M-50 118 H1300"/><path d="M-50 233 H1300"/><path d="M-50 348 H1300"/><path d="M-50 463 H1300"/><path d="M-50 578 H1300"/></g>
+</g>
+<rect width="1200" height="680" fill="#fff" opacity="0.135"/>
+</svg>

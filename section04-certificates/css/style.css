@@ -1,0 +1,361 @@
+#section04 {
+  --accent: #6f2392;
+  --text: #171717;
+  --muted: #686868;
+  --line: #dedede;
+  --surface: #ffffff;
+  --container: 1140px;
+  box-sizing: border-box;
+  padding: 88px 0 76px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+}
+
+#section04 *,
+#section04 *::before,
+#section04 *::after {
+  box-sizing: inherit;
+}
+
+#section04 .inner {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+#section04 .head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+#section04 .intro {
+  min-width: 0;
+}
+
+#section04 .eyebrow {
+  position: relative;
+  margin: 0 0 10px;
+  padding-left: 50px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#section04 .eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .78em;
+  width: 34px;
+  height: 1px;
+  background: var(--accent);
+}
+
+#section04 .title {
+  margin: 0;
+  font-size: clamp(42px, 4.2vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+#section04 .title span {
+  color: var(--accent);
+}
+
+#section04 .desc {
+  max-width: 660px;
+  margin: 24px 0 0;
+  color: #505050;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+#section04 .tabs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+#section04 .tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 9px 18px;
+  color: #666;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+#section04 .tab:hover,
+#section04 .tab:focus-visible {
+  color: var(--accent);
+}
+
+#section04 .tab:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  outline-offset: 2px;
+}
+
+#section04 .tab.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+#section04 .slider {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+#section04 .swiper-wrapper {
+  align-items: stretch;
+}
+
+#section04 .item {
+  height: auto;
+  min-width: 0;
+}
+
+#section04 .item.is-hidden {
+  display: none;
+}
+
+#section04 .media {
+  margin: 0;
+  aspect-ratio: 0.73 / 1;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+#section04 .media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#section04 .item h3 {
+  margin: 16px 0 0;
+  color: var(--text);
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+#section04 .pagination {
+  --swiper-pagination-color: var(--accent);
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  position: absolute;
+  bottom: 4px !important;
+}
+
+#section04 .pagination .swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  border: 1px solid #bdbdbd;
+}
+
+#section04 .pagination .swiper-pagination-bullet-active {
+  border-color: var(--accent);
+}
+
+
+
+#section04 .zoom {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+#section04 .zoom:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  outline-offset: -3px;
+}
+
+#section04 .zoom img {
+  transition: transform .25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #section04 .zoom:hover img {
+    transform: scale(1.02);
+  }
+}
+
+#section04 .modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background: rgba(0, 0, 0, .82);
+}
+
+#section04 .modal[hidden] {
+  display: none;
+}
+
+#section04 .dialog {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 920px);
+  max-height: calc(100vh - 64px);
+}
+
+#section04 .preview {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 64px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .35);
+}
+
+#section04 .close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font: 300 30px/1 Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+}
+
+#section04 .close:hover,
+#section04 .close:focus-visible {
+  color: var(--accent);
+}
+
+#section04 .close:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, .75);
+  outline-offset: 3px;
+}
+
+@media (max-width: 991px) {
+  #section04 {
+    padding: 72px 0 64px;
+  }
+
+  #section04 .head {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 34px;
+  }
+
+  #section04 .tabs {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  #section04 {
+    padding: 56px 0 48px;
+  }
+
+  #section04 .inner {
+    width: min(calc(100% - 32px), var(--container));
+  }
+
+  #section04 .head {
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  #section04 .eyebrow {
+    padding-left: 42px;
+    font-size: 14px;
+  }
+
+  #section04 .eyebrow::before {
+    width: 28px;
+  }
+
+  #section04 .title {
+    font-size: clamp(38px, 13vw, 54px);
+  }
+
+  #section04 .desc {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  #section04 .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+    background: #f6f4f7;
+  }
+
+  #section04 .tab {
+    min-height: 44px;
+    padding: 10px 8px;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  #section04 .tab.is-active {
+    background: var(--accent);
+  }
+
+  #section04 .slider {
+    padding-bottom: 44px;
+  }
+
+  #section04 .item h3 {
+    margin-top: 14px;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  #section04 .modal {
+    padding: 20px;
+  }
+
+  #section04 .dialog,
+  #section04 .preview {
+    max-height: calc(100vh - 40px);
+  }
+
+  #section04 .close {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  #section04 .tabs {
+    grid-template-columns: 1fr;
+  }
+}

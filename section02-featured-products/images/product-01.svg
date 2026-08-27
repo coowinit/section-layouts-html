@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <rect width="760" height="430" fill="#d9d2c1"/>
+  <rect y="232" width="760" height="198" fill="#ad754c"/>
+  <rect x="40" y="56" width="255" height="146" rx="5" fill="#a8502b"/>
+  <polygon points="24,60 168,12 315,60" fill="#6e432b"/>
+  <rect x="82" y="92" width="61" height="76" fill="#88a8ae"/>
+  <rect x="176" y="86" width="78" height="82" fill="#88563f"/>
+  <rect x="338" y="55" width="422" height="150" fill="#819375"/>
+  <g fill="#5f7357">
+    <circle cx="410" cy="132" r="58"/>
+    <circle cx="503" cy="110" r="69"/>
+    <circle cx="611" cy="130" r="64"/>
+    <circle cx="710" cy="111" r="66"/>
+  </g>
+  <rect x="0" y="205" width="760" height="27" fill="#d4cab5"/>
+  <g stroke="#845838" stroke-width="3" opacity=".72">
+    <path d="M0 276H760"/><path d="M0 323H760"/><path d="M0 370H760"/><path d="M0 417H760"/>
+    <path d="M98 232L62 430"/><path d="M218 232L195 430"/><path d="M338 232L330 430"/><path d="M458 232L466 430"/><path d="M578 232L603 430"/><path d="M698 232L742 430"/>
+  </g>
+</svg>
